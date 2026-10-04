@@ -60,7 +60,7 @@ STRATEGY_DESCRIPTIONS = {
     STRAT_BAY: "**Bay-Reihenfolge.** Die Stapel von links nach rechts abarbeiten. Sobald ein Stapel leer ist, wird in ihn geladen, und zwar im Doppelspiel mit dem nächsten Löschen, so oft es geht.",
     STRAT_SHORT: "**Kurze Entladung zuerst.** Stapel mit wenigen zu löschenden Containern zuerst: sie werden früh leer und nehmen früh Ladung auf, die dann im Doppelspiel mit den späteren "
                  "Löschspielen paart. Die kluge Faustregel.",
-    STRAT_JOHNSON: "**Johnson (exakt).** Erst die Stapel, aus denen weniger gelöscht als geladen wird (aufsteigend nach der Löschzahl), dann die übrigen (absteigend nach der Ladezahl). "
+    STRAT_JOHNSON: "**Johnson (exakt).** Erst die Stapel, aus denen höchstens so viel gelöscht wie geladen wird (aufsteigend nach der Löschzahl), dann die übrigen (absteigend nach der Ladezahl). "
                    "Beweisbar die wenigsten Spiele; die Spielzahl je Reihenfolge ist die Laufzeit eines Flow-Shops mit zwei Stufen.",
 }
 

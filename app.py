@@ -54,10 +54,10 @@ oft sich zwei Aufgaben paaren lassen. Die Demo zeigt, wie viel Kranzeit das spar
 
 st.caption("🎯 Schnellstart – ein Beispielszenario laden:")
 PRESET_HELP = {
-    "Nur Löschen": "Fast nichts zu laden: das Doppelspiel bringt wenig, und jede Reihenfolge erreicht die untere Schranke.",
+    "Nur Löschen": "Fast nichts zu laden: das Doppelspiel bringt wenig, und Johnson erreicht die untere Schranke.",
     "Ausgewogen": "Löschen und Laden halten sich die Waage: der größte Gewinn, und die Reihenfolge entscheidet über einen Teil davon.",
     "Viel Laden": "Fast alles wird geladen: die einfache Regel „kurze Entladung zuerst“ ist schon so gut wie Johnson.",
-    "Wenig Laden": "Wenig Ladung: die Reihenfolge entscheidet über einen großen Teil des Gewinns, und Johnson liegt fast immer auf der unteren Schranke.",
+    "Wenig Laden": "Wenig Ladung: die Reihenfolge entscheidet über einen Teil des Gewinns, und Johnson liegt fast immer auf der unteren Schranke.",
     "Große Bays": "Zwanzig Stapel: der Gewinn wächst mit der Stapelzahl, die untere Schranke wird aber nur noch selten erreicht.",
 }
 # Je Zeile drei Schaltflächen: bei fünf in einer Zeile werden die Namen in schmalen Fenstern abgeschnitten.
@@ -187,7 +187,7 @@ st.markdown("**Kranzeit gespart über dem Beladeanteil**")
 st.plotly_chart(V.curve_figure(curve, int(load_pct) if int(load_pct) in curve.points else None), width="stretch", key="curve_chart")
 st.caption(
     f"Basis: {len(curve.points)} Beladeanteile × {curve.n_bays} Bays (Seeds 0-{curve.n_bays - 1}), Entladeanteil {unload_pct} %, {n_stacks} Stapel, {tiers} Lagen. Der Gewinn ist am größten, wenn Laden und "
-    "Löschen ausgewogen sind; die Reihenfolge zählt am meisten bei wenig Beladung."
+    "Löschen ausgewogen sind; die Reihenfolge zählt am meisten bei ausgewogener Beladung."
 )
 
 with pdf_slot:
@@ -253,14 +253,14 @@ Doppelspiele zu fahren.
 - **Ohne Doppelspiel** (Referenz): erst alles löschen, dann alles laden, nur Einzelspiele. Zusammen so viele Spiele wie Container.
 - **Bay-Reihenfolge**: die Stapel von links nach rechts leeren; sobald ein Stapel leer ist, wird in ihn geladen, im Doppelspiel mit dem nächsten Löschen.
 - **Kurze Entladung zuerst**: Stapel mit wenig zu löschen zuerst. Sie werden früh leer und nehmen früh Ladung auf, die dann mit den späteren Löschspielen paart.
-- **Johnson (exakt)**: erst die Stapel, aus denen weniger gelöscht als geladen wird (aufsteigend nach der Löschzahl), dann die übrigen (absteigend nach der Ladezahl). Beweisbar die wenigsten
+- **Johnson (exakt)**: erst die Stapel, aus denen höchstens so viel gelöscht wie geladen wird (aufsteigend nach der Löschzahl), dann die übrigen (absteigend nach der Ladezahl). Beweisbar die wenigsten
   Spiele, ohne Löser.
 
 **Warum Johnson optimal ist.** Zu jeder Reihenfolge der Stapel gibt es eine gierige Paarung, und die Spielzahl ist genau die Laufzeit eines Flow-Shops mit zwei Stufen (Löschen, Laden), dessen
 Aufträge die Stapel sind. Für diesen Fall hat Johnson 1954 die beste Reihenfolge bewiesen. Bei bis zu 7 Stapeln probiert die Demo zur **Gegenprobe alle Reihenfolgen** durch.
 
 **Warum die Reihenfolge zählt.** Ein Stapel mit viel zu löschen bindet lange und macht spät Stapel ladbar; „größte Entladung zuerst“ ist deshalb oft schlechter als die Bay-Reihenfolge.
-Bei viel Beladung ist fast jede Reihenfolge gut (die untere Schranke ist dann die Zahl der Ladespiele), bei wenig Beladung zählt die Reihenfolge am meisten.
+Bei viel Beladung ist fast jede Reihenfolge gut (die untere Schranke ist dann die Zahl der Ladespiele), bei ausgewogener Beladung zählt die Reihenfolge am meisten.
 
 **Untere Schranke.** Jedes Spiel löscht höchstens einen und lädt höchstens einen Container: mindestens max(zu löschen, zu laden) Spiele. Johnson erreicht sie nicht immer, weil nicht jeder
 Stapel früh genug leer wird.
@@ -314,6 +314,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zum Thema: [Hafenlogistik optimieren](https://sebastianhanisch.net/hafenlogistik-optimierung.html)."
 )
