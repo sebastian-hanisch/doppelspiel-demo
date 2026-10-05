@@ -1,6 +1,7 @@
 """Bay aus den Reglern: je Stapel die Zahl der zu löschenden und der zu ladenden Container. Ganzzahlig, deterministisch aus dem Seed."""
 
 import random
+import re
 from dataclasses import dataclass
 
 import dsp_constants as C
@@ -60,7 +61,7 @@ def parse_counts(text):
     parts = [p for p in text.replace(";", ",").replace(" ", ",").split(",") if p != ""]
     out = []
     for p in parts:
-        if not p.lstrip("-").isdigit():
+        if not re.fullmatch(r"-?[0-9]+", p):
             raise ValueError(f"'{p}' ist keine ganze Zahl")
         out.append(int(p))
     return tuple(out)

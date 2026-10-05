@@ -6,7 +6,7 @@ Interaktive Fall-Demo zum **Doppelspiel am Containerkran**: Ein Kran löscht und
 Container auf das Schiff. Geladen werden darf nur in einen Stapel, der schon leer ist; deshalb entscheidet die **Reihenfolge der Stapel** eines Bays, wie oft sich zwei Aufgaben paaren lassen.
 Die Demo beantwortet: **Wie viel Kranzeit spart das Doppelspiel, und wie viel davon hängt an der Reihenfolge?**
 
-Teil des Portfolios für die Website „Sebastian Hanisch – Operations Research und Machine Learning", Zusatz zur Hafen-Linie (Kran; setzt auf der Kran-Demo `quaycrane-demo` auf und koppelt
+Teil des Portfolios für die Website „Sebastian Hanisch – Operations Research und Machine Learning“, Zusatz zur Hafen-Linie (Kran; setzt auf der Kran-Demo `quaycrane-demo` auf und koppelt
 über die Lade- und Löschlisten an die Stauplanung `stauplanung-demo`).
 
 ## Warum dieses Problem
@@ -74,7 +74,7 @@ Abstand.
 
 ## Tests
 
-`python -m pytest tests/ -v` – 495 Tests, rund 3 Minuten. Zusammensetzung:
+`python -m pytest tests/ -v` – 562 Tests, rund 3 Minuten. Zusammensetzung:
 
 - **Regeln:** Spielfolge Zug für Zug, unabhängige Prüfung jeder Fehlerklasse (`verify`), Johnson gegen Brute Force auf 200 Kleinstbays und gegen die **Zustandssuche** auf 60, Gruppen und Gleichstände, Randfälle (nur Löschen, nur Laden, ein Stapel).
 - **Auswertung:** Kennzahlen, Stichprobe, Kurve gegen Direktrechnungen, Urteil in drei Zuständen und genau an der Schwelle, Verteilung.
