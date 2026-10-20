@@ -52,6 +52,17 @@ oft sich zwei Aufgaben paaren lassen. Die Demo zeigt, wie viel Kranzeit das spar
 """
 )
 
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/doppelspiel-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Ein Containerkran löscht, nimmt also Container vom Schiff, und lädt meist nacheinander. Dabei fährt er oft leer zurück. Beim **Doppelspiel** setzt er nach dem Löschen gleich einen Container auf das Schiff: Ein Einzelspiel erledigt eine Aufgabe, ein Doppelspiel zwei. Geladen werden darf aber nur in einen Stapel, der schon leer ist. Deshalb entscheidet die Reihenfolge, in der die Stapel eines Schiffsabschnitts geleert werden, wie oft sich zwei Aufgaben paaren lassen. Die Demo vergleicht vier Vorgehen, darunter eine Reihenfolge, die beweisbar die wenigsten Spiele braucht. Sie zeigt, wie viel Kranzeit das Doppelspiel spart und welcher Teil davon an der Reihenfolge hängt. Es ist ein vereinfachtes Modell mit zufällig gezogenen Zahlen.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/doppelspiel-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
+
 st.caption("🎯 Schnellstart – ein Beispielszenario laden:")
 PRESET_HELP = {
     "Nur Löschen": "Fast nichts zu laden: das Doppelspiel bringt wenig, und Johnson erreicht die untere Schranke.",
@@ -280,6 +291,28 @@ vom Median heißt, dass wenige Bays den Gewinn tragen.
     )
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/doppelspiel-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind die Stapel eines Bays mit ihren Löschzahlen $u_i$ und Ladezahlen $l_i$ und das Zeitverhältnis $r$ von Doppel- zu Einzelspiel. Gesucht ist die Reihenfolge $\sigma$ der Stapel, die möglichst viele Doppelspiele $D(\sigma)$ ergibt und damit Spiele $Z(\sigma)$ und Kranzeit $T(\sigma)$ minimiert.
+
+| Symbol | Bedeutung |
+|---|---|
+| $S$, $i$ | Zahl der Stapel im Bay, Stapel |
+| $u_i$, $l_i$ | zu löschende und zu ladende Container im Stapel $i$ |
+| $U$, $L$ | Summe aller Löschungen und aller Ladungen |
+| $\sigma$, $\sigma(k)$ | Reihenfolge, in der die Stapel geleert werden; der $k$-te Stapel darin |
+| $A_k$ | verfügbare Ladungen: Ladungen der Stapel, die schon leer sind und noch nicht beladen wurden |
+| $d_k$ | Doppelspiele, die beim Leeren des $k$-ten Stapels entstehen |
+| $D(\sigma)$ | Zahl der Doppelspiele |
+| $Z(\sigma)$ | Zahl der Spiele (Einzel- und Doppelspiele) |
+| $T(\sigma)$ | Kranzeit in Einzelspielen |
+| $r$ | Dauer eines Doppelspiels in Einzelspielen |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/doppelspiel-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Doppelspiel-Planung eines Bays** (polynomial lösbar; Zwei-Maschinen-Flow-Shop).
