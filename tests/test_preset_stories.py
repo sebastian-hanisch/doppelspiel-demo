@@ -1,4 +1,4 @@
-"""Jedes Preset erzählt eine Geschichte (Abnahmekriterien in dsp_stories.py). Hier wird geprüft, dass sie trägt:
+"""Jedes Preset erzählt eine Geschichte (Abnahmekriterien in dsp_stories.py). Hier wird geprüft, dass sie zutrifft:
 
 1. an dem EINEN Bay, den das Preset zeigt (sonst zeigt das Preset das Gegenteil seines Hilfetexts),
 2. im MITTEL über 200 andere Bays (sonst ist das Preset ein Einzelfall, ausgesucht nach dem schönsten Seed),

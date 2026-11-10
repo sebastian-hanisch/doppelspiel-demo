@@ -278,7 +278,7 @@ Stapel früh genug leer wird.
 
 **Stichprobe, Verteilung und Urteil.** Die Stichprobe stellt Ihre Einstellungen auf 200 Bays (Seeds 0 bis 199, nicht Ihr Seed) nach. Ein Unterschied gilt als klar, wenn er mehr als zwei
 Standardfehler der gepaarten Differenz beträgt. Die Verteilung zeigt, in wie vielen Bays ein Verfahren weniger, gleich viele oder mehr Spiele braucht als die Bay-Reihenfolge; ein Mittelwert weit
-vom Median heißt, dass wenige Bays den Gewinn tragen.
+vom Median heißt, dass wenige Bays den Gewinn erbringen.
 
 **Grenzen dieses Modells** (bewusst so gewählt, damit die Aussage ehrlich bleibt):
 

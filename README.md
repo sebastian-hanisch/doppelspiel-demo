@@ -47,7 +47,7 @@ Die **Gegenprobe** probiert bei bis zu 7 Stapeln alle Reihenfolgen durch und bes
 | **Wie viel macht die Reihenfolge aus?** | Bei 50 %: 59,4 Spiele ohne Doppelspiel, 35,9 in Bay-Reihenfolge, 34,2 mit kurzer Entladung, **32,9 mit Johnson**; Johnson braucht in 92 % der Bays weniger Spiele als die Bay-Reihenfolge. „Größte Entladung zuerst“ ist schlechter als die Bay-Reihenfolge. |
 | **Reicht die Faustregel?** | Bei viel Beladung (80 %): ja, „kurze Entladung zuerst“ = Johnson in 200 von 200 Bays. Bei wenig Beladung (20 %) liegt Johnson in 140 von 200 Bays vorn. |
 | **Erreicht man die untere Schranke?** | Bei wenig Beladung fast immer (94 % der Bays), bei ausgewogener Beladung in 18 %, bei 20 × 8 Stapeln in 6 %: dort ist die Schranke nicht erreichbar, Johnson bleibt das Beste. |
-| **Presets** | Eine gemeinsame Bay-Nummer (Seed 657) für alle fünf; jede Kennzahl zwischen dem 10. und 90. Perzentil der Grundgesamtheit. Von 500 Seeds tragen 285 alle fünf Geschichten. |
+| **Presets** | Eine gemeinsame Bay-Nummer (Seed 657) für alle fünf; jede Kennzahl zwischen dem 10. und 90. Perzentil der Grundgesamtheit. Von 500 Seeds zeigen 285 alle fünf Geschichten. |
 
 ## Ehrliche Grenzen
 
