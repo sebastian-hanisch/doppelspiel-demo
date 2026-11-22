@@ -45,7 +45,7 @@ def _compute_sample(key):
 st.title("🏗️ Doppelspiel: Was bringt es, beim Löschen gleich zu laden?")
 st.markdown(
     """
-Ein Containerkran löscht und lädt meist nacheinander und fährt dabei oft leer zurück. Beim **Doppelspiel** setzt er nach dem Löschen gleich einen Container auf das Schiff: ein
+Ein Containerkran löscht und lädt meist nacheinander und fährt dabei oft leer zurück. Beim **Doppelspiel** (englisch Double Cycling oder Dual Cycling) setzt er nach dem Löschen gleich einen Container auf das Schiff: ein
 **Einzelspiel** erledigt eine Aufgabe, ein **Doppelspiel** zwei. Geladen werden darf aber nur in einen Stapel, der schon leer ist; deshalb entscheidet die **Reihenfolge der Stapel**, wie
 oft sich zwei Aufgaben paaren lassen. Die Demo zeigt, wie viel Kranzeit das spart und wie viel davon an der Reihenfolge hängt. Wie das Modell funktioniert, steht im Expander
 "Wie funktioniert diese Demo?" weiter unten, die formale Herleitung im Expander "📐 Mathematische Formulierung".

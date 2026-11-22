@@ -2,7 +2,7 @@
 
 **[→ Demo live ausprobieren](https://sebastianhanisch-doppelspiel-demo.streamlit.app/)**
 
-Interaktive Fall-Demo zum **Doppelspiel am Containerkran**: Ein Kran löscht und lädt meist nacheinander und fährt dabei oft leer zurück. Beim Doppelspiel setzt er nach dem Löschen gleich einen
+Interaktive Fall-Demo zum **Doppelspiel am Containerkran**: Ein Kran löscht und lädt meist nacheinander und fährt dabei oft leer zurück. Beim Doppelspiel (englisch Double Cycling oder Dual Cycling) setzt er nach dem Löschen gleich einen
 Container auf das Schiff. Geladen werden darf nur in einen Stapel, der schon leer ist; deshalb entscheidet die **Reihenfolge der Stapel** eines Bays, wie oft sich zwei Aufgaben paaren lassen.
 Die Demo beantwortet: **Wie viel Kranzeit spart das Doppelspiel, und wie viel davon hängt an der Reihenfolge?**
 
